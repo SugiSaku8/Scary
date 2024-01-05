@@ -8,4 +8,5 @@ Developed by Carnation Studio
 Sound: Carnation Studio  
 Organizer:SugiSaku  
 Publisher:Carnation   
-©️Carnation Studio 2024 All rights reserved# Scary  
+©️Carnation Studio 2024 All rights reserved
+# Scary 2024 
