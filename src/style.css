@@ -1,0 +1,119 @@
+@font-face {
+    font-family: "SS4";
+    src: url("./font/SourceSerif4.ttf") format("truetype");
+    font-display: swap;
+    /*.woff：'woff'
+  .woff2：'woff2'
+  .ttf：'truetype'
+  .otf：'opentype'
+  .eot：'embedded-opentype'（IEのみ）
+  .svg：'svg'*/
+  
+    /*
+  フォントの定義の説明
+  フォントの定義は次のように行います。
+  @font-face {
+  font-family: 'フォントの名前';
+  src: url('フォントデータのパス')format('フォーマット形式');
+  フォーマットは次のような形式がある
+  .woff：'woff'
+  .woff2：'woff2'
+  .ttf：'truetype'
+  .otf：'opentype'
+  .eot：'embedded-opentype'（IEのみ）
+  .svg：'svg'
+  
+  */
+  }
+  @font-face {
+    font-family: "chapbook";
+    src: url("./font/Chapbook-Regular.otf") format("opentype");
+    font-display: swap;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+
+  body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'SS4';
+      overflow: hidden;
+  }
+  
+  /* 背景をぼかす */
+  .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('./image/back.png') no-repeat center center/cover;
+      filter: blur(5px);
+      z-index: -1;
+  }
+  
+  .container {
+      text-align: center;
+      position: relative;
+  }
+  
+  /* タイトル */
+  .title {
+      font-size: 70px;
+      color: white;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+      margin-bottom: 50px;
+  }
+  
+  /* ボタンの共通スタイル */
+  .btn {
+      display: block;
+      width: 400px;
+      padding: 15px;
+      margin: 20px auto;
+      font-size: 26px;
+      color: white;
+      background: black;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+  }
+  
+  /* ボタンの形状を正確に再現 */
+  .start-new {
+      clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%);
+  }
+  
+  .start-saved {
+      clip-path: polygon(12% 0%, 88% 0%, 100% 100%, 0% 100%);
+  }
+  
+  .btn:hover {
+      background: #444;
+  }
+  
+  /* 設定ボタン */
+  .setting {
+      position: absolute;
+      left: -120px;
+      bottom: 20px;
+      width: 120px;
+      height: 120px;
+      font-size: 22px;
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  }
+  
+  /* 著作権表示 */
+  .copyright {
+      position: absolute;
+      right: 20px;
+      bottom: 10px;
+      font-size: 22px;
+      color: white;
+      text-align: right;
+      line-height: 1.5;
+  }
+  
