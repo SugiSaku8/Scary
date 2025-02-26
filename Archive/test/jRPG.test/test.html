@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2Dゲーム</title>
+    <style>
+        #game-container {
+            position: relative;
+            width: 800px;
+            height: 600px;
+            background-image: url('map.jpg');
+            background-size: cover;
+        }
+        #player {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="player"></div>
+    </div>
+
+    <script>
+        var player = document.getElementById('player');
+        var gameContainer = document.getElementById('game-container');
+
+        // プレイヤーの初期位置
+        var playerX = 0;
+        var playerY = 0;
+
+        // 侵入できないエリアの座標
+        var forbiddenAreas = [
+            { x: 200, y: 200, width: 100, height: 100 },
+            { x: 400, y: 300, width: 150, height: 150 }
+        ];
+
+        // キーボードの入力を監視
+        document.addEventListener('keydown', function(event) {
+            var nextPlayerX = playerX;
+            var nextPlayerY = playerY;
+
+            switch(event.key) {
+                case 'ArrowUp':
+                    nextPlayerY = playerY - 10;
+                    break;
+                case 'ArrowDown':
+                    nextPlayerY = playerY + 10;
+                    break;
+                case 'ArrowLeft':
+                    nextPlayerX = playerX - 10;
+                    break;
+                case 'ArrowRight':
+                    nextPlayerX = playerX + 10;
+                    break;
+            }
+
+            // プレイヤーが画面外に出ないようにする
+            if(nextPlayerX < 0) nextPlayerX = 0;
+            if(nextPlayerX > gameContainer.offsetWidth - player.offsetWidth) nextPlayerX = gameContainer.offsetWidth - player.offsetWidth;
+            if(nextPlayerY < 0) nextPlayerY = 0;
+            if(nextPlayerY > gameContainer.offsetHeight - player.offsetHeight) nextPlayerY = gameContainer.offsetHeight - player.offsetHeight;
+
+            // 侵入できないエリアに入らないようにする
+            for(var i = 0; i < forbiddenAreas.length; i++) {
+                if(nextPlayerX < forbiddenAreas[i].x + forbiddenAreas[i].width && nextPlayerX + player.offsetWidth > forbiddenAreas[i].x && nextPlayerY < forbiddenAreas[i].y + forbiddenAreas[i].height && nextPlayerY + player.offsetHeight > forbiddenAreas[i].y) {
+                    // 侵入できないエリアに入ろうとした場合、プレイヤーの移動を停止
+                    return;
+                }
+            }
+
+            // プレイヤーの位置を更新
+            playerX = nextPlayerX;
+            playerY = nextPlayerY;
+            player.style.left = playerX + 'px';
+            player.style.top = playerY + 'px';
+        });
+    </script>
+</body>
+</html>

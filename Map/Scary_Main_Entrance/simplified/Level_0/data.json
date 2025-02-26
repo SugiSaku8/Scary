@@ -1,0 +1,19 @@
+{
+	"identifier": "Level_0",
+	"uniqueIdentifer": "7140f9c1-e920-11ef-b6fb-df0368518b6b",
+	"x": -1056,
+	"y": 0,
+	"width": 2416,
+	"height": 448,
+	"bgColor": "#696A79",
+	"neighbourLevels": [],
+	"customFields" : {},
+	"layers": [
+		"Floor_OLD_Layer.png",
+		"Floor_New_Layer.png",
+		"TOBIRA_OLD_RIGHT_Layer.png",
+		"TOBIRA_OLD_LEFT_Layer.png",
+		"TOBIRA_OLD_SIDE_Layer.png"
+	],
+	"entities" : {}
+}
