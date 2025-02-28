@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>You Died Screen</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, black, #555);
+            color: white;
+            font-family: 'Georgia', serif;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 64px;
+            margin: 0 0 20px;
+        }
+
+        .description {
+            font-size: 24px;
+            margin: 10px 0 20px;
+        }
+
+        .time {
+            font-size: 28px;
+            margin: 20px 0;
+        }
+
+        .note {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: black;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            text-align: left;
+            line-height: 1.8;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>You Died!</h1>
+    <div class="description">
+        ${playername}は、リチウムイオンバッテリーの爆発に巻き込まれた
+    </div>
+    <div class="time">
+        生存時間:0日0時間0分0秒
+    </div>
+    <div class="note">
+        Note:リチウムイオンバッテリーは、強い衝撃を与えられたり、<br>
+        過充電してしまったり高温の環境に放置したりすると<br>
+        発火して爆発することがあります。気をつけましょうね。
+    </div>
+</div>
+
+</body>
+</html>
