@@ -1,0 +1,164 @@
+@font-face {
+  font-family: "SS4";
+  src: url("./font/SourceSerif4.ttf") format("truetype");
+  font-display: swap;
+  /*.woff：'woff'
+  .woff2：'woff2'
+  .ttf：'truetype'
+  .otf：'opentype'
+  .eot：'embedded-opentype'（IEのみ）
+  .svg：'svg'*/
+
+  /*
+  フォントの定義の説明
+  フォントの定義は次のように行います。
+  @font-face {
+  font-family: 'フォントの名前';
+  src: url('フォントデータのパス')format('フォーマット形式');
+  フォーマットは次のような形式がある
+  .woff：'woff'
+  .woff2：'woff2'
+  .ttf：'truetype'
+  .otf：'opentype'
+  .eot：'embedded-opentype'（IEのみ）
+  .svg：'svg'
+  
+  */
+}
+@font-face {
+  font-family: "chapbook";
+  src: url("./font/Chapbook-Regular.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Scary_letter";
+  src: url("./font/Scary-Letter.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "ZenMaru";
+  src: url("./font/ZenMaruGothic-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "chapbook";
+  overflow: hidden;
+  background: url("./image/back.png") no-repeat center center/cover;
+}
+
+.containerA {
+  text-align: center;
+  position: relative;
+}
+
+/* タイトル */
+.title {
+  font-size: 70px;
+  color: white;
+  text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.7);
+  margin-bottom: 50px;
+  font-family: "chapbook";
+}
+
+/* ボタンの共通スタイル */
+.btn {
+  display: block;
+  width: 400px;
+  padding: 15px;
+  margin: 20px auto;
+  font-size: 26px;
+  color: white;
+  background: black;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: "SS4";
+}
+
+/* ボタンの形状を正確に再現 */
+.start-new {
+  clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%);
+}
+
+.start-saved {
+  clip-path: polygon(12% 0%, 88% 0%, 100% 100%, 0% 100%);
+}
+
+.btn:hover {
+  background: #444;
+}
+
+/* 設定ボタン */
+.setting {
+  position: absolute;
+  left: -120px;
+  bottom: 20px;
+  width: 120px;
+  height: 120px;
+  font-size: 22px;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+/* 著作権表示 */
+.copyright {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: 22px;
+  color: white;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.di {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background: linear-gradient(to right, black, #555);
+  color: white;
+  font-family: "Georgia";
+  text-align: center;
+  z-index: 999999999999;
+}
+
+.containerB {
+  max-width: 800px;
+  padding: 20px;
+  z-index: 99999999999999;
+}
+
+h1 {
+  font-size: 64px;
+  margin: 0 0 20px;
+}
+
+.description {
+  font-size: 24px;
+  margin: 10px 0 20px;
+}
+
+.time {
+  font-size: 28px;
+  margin: 20px 0;
+}
+
+.note {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: left;
+  line-height: 1.8;
+  margin-top: 20px;
+  font-family: "ZenMaru";
+}

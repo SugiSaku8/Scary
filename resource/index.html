@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scary Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="containerA" id="CA">
+      <p class="title">Scary</p>
+      <button class="btn start-new" onclick="startNewGame()">
+        Start new Game
+      </button>
+      <button class="btn start-saved" onclick="startSavedGame()">
+        Start Saved Game
+      </button>
+
+      <button class="btn setting" onclick="openSettings()">Setting</button>
+
+      <p class="copyright">(c) 2025<br />Sugisaku8</p>
+    </div>
+    <div class="di" id="CB">
+      <div class="containerB">
+        <h1>You Died!</h1>
+        <div class="description">
+          ${playername}は、リチウムイオンバッテリーの爆発に巻き込まれた
+        </div>
+        <div class="time">生存時間:0日0時間0分1秒</div>
+        <div class="note">
+          Note:リチウムイオンバッテリーは、強い衝撃を与えられたり、<br />
+          過充電してしまったり高温の環境に放置したりすると<br />
+          発火して爆発することがあります。気をつけましょうね。
+        </div>
+      </div>
+    </div>
+    <script>
+      document.getElementById("CB").style.display = "none";
+      function startNewGame() {
+        document.getElementById("CA").style.display = "none";
+        document.getElementById("CB").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
