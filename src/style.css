@@ -1,0 +1,97 @@
+body {
+    font-size: 18px;
+}
+body {
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* 全体配置 */
+#start {
+    text-align: center;
+    font-family: "Courier New", serif;
+    margin-top: 40px;
+    color: #000;
+}
+
+/* タイトル（Scary） */
+#start .title {
+    font-size: 140px;
+    letter-spacing: 5px;
+    margin: 20px 0 0 0;
+}
+
+/* サブタイトル */
+#start .subtitle {
+    font-size: 40px;
+    margin: -10px 0 40px 0;
+}
+
+/* 六角形風ボタンの共通スタイル */
+#start button {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 25px 80px;
+    font-size: 65px;
+    font-family: inherit;
+    cursor: pointer;
+    display: block;
+    margin: 40px auto;
+    clip-path: polygon(
+        10% 0%,
+        90% 0%,
+        100% 50%,
+        90% 100%,
+        10% 100%,
+        0% 50%
+    ); /* 六角形 */
+}
+
+/* NEW GAME ボタン */
+#start .newgame_btn {
+    width: 900px;
+}
+
+/* SETTING ボタン */
+#start .setting_btn {
+    width: 650px;
+    font-size: 55px;
+    margin-top: 20px;
+}
+
+/* 著作権表記 */
+#start .copylight {
+    font-size: 40px;
+    margin-top: 80px;
+}
+
+/*マップのスタイル*/
+#scary_map {
+    z-index: 1;
+    position: relative;
+    width: 150%;
+    min-height: 100vh;
+}
+/*Skin本体*/
+#player_img {
+    z-index: 99999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+}
+/*Skinを格納するContainer*/
+#skinContainer {
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
