@@ -1,52 +1,76 @@
 <!doctype html>
 <html>
+    <head>
+        <title>scary</title>
+        <link rel="stylesheet" href="style.css" />
+        <script type="module" src="./script/dom.js"></script>
+        <script type="module" src="./script/player.js"></script>
+    </head>
+    <body>
+        <div id="start">
+            <p class="title big start">Scary</p>
+            <p class="subtitle start">made by Monolith Studio</p>
+            <button class="newgame_btn start" id="newgame_click">
+                new game
+            </button>
+            <button class="setting_btn start" id="setting_btn_click">
+                setting
+            </button>
+            <p class="copylight start">
+                (C) Carnation Monolith Studio 2025-2026
+            </p>
+        </div>
+        <div id="loading">
+            <p class="texty loading">
+                Loading...<by>this game's music by sugisaku8</by>
+            </p>
+        </div>
+        <div id="game">
+            <div class="map">
+                <div id="skinContainer" style="width: 0px; height: 0px">
+                    <img id="player_img" src="./img/scare.png" />
+                </div>
+                <map name="image-map" id="scary_map">
+                    <img
+                        style="width: 2000px; height: 2000px"
+                        src="./img/map.png"
+                        usemap="#ImageMap"
+                        alt=""
+                        id="map"
+                    />
+                    <map name="ImageMap">
+                        <area
+                            shape="rect"
+                            onclick="open_trihiki()"
+                            class="tri"
+                            coords="1330, 1546, 2522, 2442"
+                            alt=""
+                        />
+                        <area
+                            shape="rect"
+                            onclick="open_trihiki()"
+                            g
+                            class="tri"
+                            coords="2694, 1554, 4108, 2506"
+                            alt=""
+                        />
+                        <area
+                            shape="rect"
+                            onclick="open_trihiki()"
+                            class="tri"
+                            coords="2156, 654, 3500, 1290"
+                            alt=""
+                        />
+                    </map>
+                </map>
+            </div>
 
-<head>
-    <meta charset="utf-8">
-    <title>RPG Game</title>
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimum-scale=1, width=device-width, height=device-height">
-</head>
-
-<body>
-    <div id="rpg"></div>
-    
-    <style>
-        body,
-        html {
-            height: 100%;
-            overflow: hidden;
-        }
-
-        body {
-            margin: 0;
-            background-color: black; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        #rpg {
-            position: relative;
-            
-        }
-
-        @media (min-width: 800px) {
-            #rpg {
-                width: 816px;
-                height: 624px;
-            }
-        }
-
-        @media (max-width: 800px) {
-            #rpg {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-            }
-        }
-    </style>
-</body>
-
+            <div id="clock">
+                <img id="clock_img" />
+            </div>
+            <div id="die">
+                <img id="die_img" />
+            </div>
+        </div>
+    </body>
 </html>
